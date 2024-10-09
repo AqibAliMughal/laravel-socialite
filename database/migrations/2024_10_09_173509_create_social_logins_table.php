@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('social_logins', function (Blueprint $table) {
             $table->id();
+            $table->string('provider');
+            $table->string('provider_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
